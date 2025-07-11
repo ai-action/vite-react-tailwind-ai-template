@@ -18,8 +18,9 @@ export default function Messages(props: Props) {
 
   return (
     <div className="flex-1 space-y-4 overflow-auto px-6" ref={messagesRef}>
-      {messages.map(({ role, content }) => (
+      {messages.map(({ role, content }, index) => (
         <p
+          key={index}
           className={clsx(
             'flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm',
             (role === 'assistant' || role === 'system') && 'bg-gray-100',

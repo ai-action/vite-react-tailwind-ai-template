@@ -1,4 +1,4 @@
-import { type CoreMessage, generateText } from 'ai';
+import { type CoreMessage, streamText } from 'ai';
 import { createWorkersAI } from 'workers-ai-provider';
 
 interface Env {
@@ -29,14 +29,21 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
     const workersai = createWorkersAI({ binding: context.env.AI });
 
-    // https://sdk.vercel.ai/providers/community-providers/cloudflare-workers-ai#generatetext
-    const result = await generateText({
+    // https://ai-sdk.dev/providers/community-providers/cloudflare-workers-ai#streamtext
+    const result = await streamText({
       model: workersai('@cf/meta/llama-3.1-8b-instruct'),
       maxTokens: MAX_TOKENS,
       messages,
     });
 
-    return new Response(result.text, getResponseInit(context));
+    return result.toTextStreamResponse({
+      headers: {
+        ...getResponseInit(context).headers,
+        'Content-Type': 'text/x-unknown',
+        'Content-Encoding': 'identity',
+        'Transfer-Encoding': 'chunked',
+      },
+    });
   } catch (error) {
     // InferenceUpstreamError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage.
     if (
