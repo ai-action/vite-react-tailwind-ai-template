@@ -3,7 +3,7 @@ export default function SendIcon() {
     <>
       <svg
         aria-hidden="true"
-        class="text-blue-600"
+        className="text-blue-600"
         fill="none"
         height="24"
         stroke-linecap="round"
@@ -18,7 +18,7 @@ export default function SendIcon() {
         <path d="M22 2 11 13"></path>
       </svg>
 
-      <span class="sr-only">Send</span>
+      <span className="sr-only">Send</span>
     </>
   );
 }

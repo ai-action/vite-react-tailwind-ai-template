@@ -3,7 +3,7 @@ export default function Spinner() {
     <>
       <svg
         aria-hidden="true"
-        class="h-6 w-6 animate-spin fill-blue-600 text-gray-200"
+        className="h-6 w-6 animate-spin fill-blue-600 text-gray-200"
         fill="none"
         viewBox="0 0 100 101"
         xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@ export default function Spinner() {
         />
       </svg>
 
-      <span class="sr-only">Loading...</span>
+      <span className="sr-only">Loading...</span>
     </>
   );
 }

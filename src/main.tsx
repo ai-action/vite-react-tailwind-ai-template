@@ -1,7 +1,12 @@
 import './index.css';
 
-import { render } from 'preact';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 import Chat from './components/Chat';
 
-render(<Chat />, document.getElementById('root')!);
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <Chat />
+  </React.StrictMode>,
+);
