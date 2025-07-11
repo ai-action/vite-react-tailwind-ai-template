@@ -1,16 +1,16 @@
-# vite-preact-tailwind-ai-template
+# vite-react-tailwind-ai-template
 
-[![build](https://github.com/ai-action/vite-preact-tailwind-ai-template/actions/workflows/build.yml/badge.svg)](https://github.com/ai-action/vite-preact-tailwind-ai-template/actions/workflows/build.yml)
+[![build](https://github.com/ai-action/vite-react-tailwind-ai-template/actions/workflows/build.yml/badge.svg)](https://github.com/ai-action/vite-react-tailwind-ai-template/actions/workflows/build.yml)
 
-Vite Preact Tailwind AI template.
+Vite React Tailwind AI template.
 
 ## Install
 
 Clone the repository:
 
 ```sh
-git clone https://github.com/ai-action/vite-preact-tailwind-ai-template.git
-cd vite-preact-tailwind-ai-template
+git clone https://github.com/ai-action/vite-react-tailwind-ai-template.git
+cd vite-react-tailwind-ai-template
 ```
 
 Install the dependencies:
