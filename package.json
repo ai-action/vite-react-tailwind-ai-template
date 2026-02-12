@@ -15,7 +15,7 @@
     "start": "run-p client server"
   },
   "dependencies": {
-    "ai": "4.3.19",
+    "ai": "6.0.81",
     "clsx": "2.1.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
